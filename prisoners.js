@@ -2,11 +2,12 @@ let prisonersNumbers;
 let boxesNumbers;
 let positive = 0;
 let negative = 0;
-const NUMBER_OF_TESTS = 100000;
+const NUMBER_OF_TESTS = 1000;
+const NUMBER_OF_PRISONERS = 1000;
 for (let index = 0; index < NUMBER_OF_TESTS; index++) {  
-    prisonersNumbers = returnRandom(100);    
-    boxesNumbers = returnRandom(100);
-    let result = allPrisonersGoFind(100); 
+    prisonersNumbers = returnRandom(NUMBER_OF_PRISONERS);    
+    boxesNumbers = returnRandom(NUMBER_OF_PRISONERS);
+    let result = allPrisonersGoFind(NUMBER_OF_PRISONERS); 
     if (result)   positive +=1;
     else negative += 1;
 }
@@ -17,7 +18,7 @@ console.log('Probability of negative: ', negative * 100 / NUMBER_OF_TESTS, '%');
 function returnRandom(numberOf) {
     const boxesInnerNumbers = [0];
     while (boxesInnerNumbers.length < numberOf + 1) {
-        let newRnd = Math.floor(1 + Math.random() * 100);
+        let newRnd = Math.floor(1 + Math.random() * numberOf);
         if ( !boxesInnerNumbers.includes(newRnd)) {
             boxesInnerNumbers.push(newRnd);
         }        
