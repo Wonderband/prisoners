@@ -10,8 +10,8 @@ for (let index = 0; index < NUMBER_OF_TESTS; index++) {
     if (result)   positive +=1;
     else negative += 1;
 }
-console.log('Probability of positive: ', positive / NUMBER_OF_TESTS, '%');
-console.log('Probability of negative: ', negative / NUMBER_OF_TESTS, '%');
+console.log('Probability of positive: ', positive * 100 / NUMBER_OF_TESTS, '%');
+console.log('Probability of negative: ', negative * 100 / NUMBER_OF_TESTS, '%');
 
 
 function returnRandom(numberOf) {
@@ -55,40 +55,3 @@ function allPrisonersGoFind(numberOf) {
     //console.log('YES!!! We found all!!!');
     return true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
